@@ -1,0 +1,39 @@
+:root {
+  --clr-slate600: rgb(60, 60, 60);
+  --clr-slate400: rgb(24, 24, 24);
+  --clr-note-1: rgb(255, 127, 80);
+  --clr-border: rgba(255, 255, 255, 1);
+}
+
+body {
+  background-color: var(--clr-slate400);
+}
+
+.border {
+  padding-block: 2rem;
+  position: absolute;
+  content: "";
+  height: 30rem;
+  width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-slate600);
+  animation: border_smaller 30s linear forwards;
+}
+
+.note {
+  --note-speed: 2s;
+  position: absolute;
+  height: 2rem;
+  width: 1rem;
+  content: "";
+  background-color: coral;
+  border: 1px solid var(--clr-border);
+}
+
+@keyframes border_smaller {
+  100% {
+    width: 1rem;
+  }
+}
